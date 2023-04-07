@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;700&display=swap');
+body{
+    font-family: 'Mukta', sans-serif;
+    margin: 0;
+    color: rgb(53, 53, 53);
+}
+h1{
+    text-align: center;
+    margin: 30px;
+    font-size: 2.3rem; 
+}
+h1 span{
+    color: darkgreen;
+    font-weight: 700;
+}
+.container{
+    /* width: 100%; */
+    margin: 0 100px;
+    background-color: rgba(121, 121, 121, 0.05);
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+.advertising{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.advertising .text{
+    font-size: 1rem;
+    width: 50%;
+    padding-left: 40px;
+}
+.text ul{
+    padding-inline-start: 15px;
+}
+.text .underline-one{
+    text-decoration: none;
+    cursor: pointer;
+    /*color: #00bfff; !* Цвет обычной ссылки *!*/
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.underline-one:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: rgb(53, 53, 53); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: forestgreen; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+.image {
+    width: 50%;
+}
+.image img{
+    max-width: 600px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    height: 1px;
+    width:90%;
+    background-color: rgb(168, 168, 168);
+    margin: 10px 0;
+}
+.form{
+    width: 35%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+h2{
+    font-size: 1.6rem;
+}
+.form input, button{
+    font-size: 1rem;
+}
+.form input{
+    width: 96%;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid rgb(168, 168, 168);
+}
+.form button{
+    color: white;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 3px;
+    padding: 11px 0;
+    width: 100%;
+    transition: 0.2s;
+
+}
+.form button:hover{
+    scale: 0.95;
+    cursor: pointer;
+    background-color: rgb(0, 75, 0);
+}
+
+@media only screen and (max-width: 800px){
+    h1{
+        text-align: center;
+        margin: 15px;
+        font-size: 1.8rem; 
+    }
+    .container{
+        margin: 0 50px;
+        text-align: justify;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    .advertising {
+        display: flex;
+        flex-direction: column;
+    }
+    .advertising .text{
+        font-size: 0.8rem;
+        width: 80%;
+        padding-left: 30px;
+    }
+    .image{
+        order: -1;
+        width: 100%;
+    }
+    .image img{
+        /* max-width: 300px; */
+        object-fit: contain;
+        object-position: center;
+    }
+    .form{
+        width: 80%;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    .form input, button{
+        font-size: 0.9rem;
+    }
+}
